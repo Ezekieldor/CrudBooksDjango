@@ -1,0 +1,8 @@
+<h1>Book Update</h1>
+<h1>{{ bookVal.name }}</h1>
+<form action="{% url 'books:update_book' %}" method="post">
+{% csrf_token %}
+    <input name="bookName" value='{{ object.name }}'>
+    <input name="bookPages" value='{{ object.pages }}'>
+    <input type="submit" value="update_book" />
+</form>

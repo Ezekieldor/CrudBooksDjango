@@ -1,0 +1,7 @@
+<h1>Book Delete</h1>
+<form action="{% url 'books:delete_book' %}" method="post">
+   {% csrf_token %}
+    Are you sure you want to delete "{{ object }}" ?
+   <input hidden name="nameDelete" value='{{ object.name }}'>
+   <input type="submit" value="book_delete" />
+</form>

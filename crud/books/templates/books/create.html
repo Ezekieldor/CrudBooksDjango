@@ -1,0 +1,16 @@
+<script>
+    function func () {
+         alert ("Hello");
+    }
+</script>
+<h1>Book Create</h1>
+<form method="post">
+{% csrf_token %}
+    <input name="name">
+    <br />
+    <input name="pages">
+    <br />
+    <button onclick="func()">Click</button>
+
+    <input type="submit" value="create_book">
+</form>
